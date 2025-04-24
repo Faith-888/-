@@ -1,23 +1,60 @@
 
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>微光 Mirilight</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微光 · 第一幕</title>
+    <style>
+        @font-face {
+            font-family: 'AlibabaFont';
+            src: url('https://at.alicdn.com/t/c/font_4146270_3t8z9qit8f.woff2') format('woff2');
+        }
+        body {
+            margin: 0;
+            background-color: black;
+            font-family: 'AlibabaFont', sans-serif;
+            color: white;
+            text-align: left;
+            padding: 5vh 8vw;
+            line-height: 1.8;
+            font-size: 1.2rem;
+        }
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        .btn-group {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        button {
+            padding: 12px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            background-color: #ffffff20;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
 </head>
-<body>
-  <div class="overlay">
-    <div class="line">你愿不愿意相信——</div>
-    <div class="line">有一束微光，住在你心里很久了。</div>
-    <div class="line">它一直在，从未真正消失，</div>
-    <div class="line">只是你有时候，忘了它的名字……</div>
-    <div class="buttons">
-      <button>我愿意相信</button>
-      <button>我现在还不敢相信</button>
+<body style="background-image: url('background.jpg'); background-size: cover; background-position: center;">
+    <div id="text-container">
+        <div class="fade-in" style="animation-delay: 1s;">你愿不愿意相信——</div>
+        <div class="fade-in" style="animation-delay: 4s;">有一束微光，住在你心里很久了。</div>
+        <div class="fade-in" style="animation-delay: 7s;">它一直在，从未真正消失。</div>
+        <div class="fade-in" style="animation-delay: 10s;">只是你有时候，忘了它的名字……</div>
     </div>
-  </div>
-  <script src="script.js"></script>
+
+    <div class="fade-in btn-group" style="animation-delay: 14s;">
+        <button>我愿意相信</button>
+        <button>我现在还不敢相信</button>
+    </div>
 </body>
 </html>
